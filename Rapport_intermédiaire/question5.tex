@@ -1,5 +1,5 @@
 %%Énoncé
-Énoncé
+Comment obtenir la liste des entrées mémorisées dans un Map implémenté par une table de hachage ? Cette implémentation conviendrait-elle pour un Map ordonné ? Quelles seraient les complexités temporelles des méthodes spécifiques au Map ordonné dans ce cas ? Si l’on dispose d’une liste triée de toutes les entrées d’un dictionnaire et que l’on suppose cette liste fixe (aucun ajout ou retrait n’est permis), est-il intéressant de mémoriser ces entrées dans une table de hachage ? Justifiez votre réponse. Quelle est la complexité spatiale d’une table de hachage ?
 
 %%Réponse
-Réponse
+La méthode entrySet() permet d’obtenir une liste des entrées clé-valeur. Elle parcourt la table de hachage, et pour chaque élément non vide, elle crée un élément dans un tableau. Cette implémentation convient pour un Map ordonné. La complexité temporelle pour cette méthode spécifique au Map ordonné est 0(n). Si l’on dispose d’une liste triée fixe de toutes les entrées d’un dictionnaire, il n’est pas intéressant de la stocker dans une table de hachage, car on peut la stocker dans un tableau ordonné, ce qui prendrait moins d’espace car on ne gaspillerait pas d’espace pour éviter les collisions. De plus, une table de hachage mélangerait toutes les données du dictionnaire. La complexité spatiale d’une table de hachage est 0(1) car ajouter ou retirer un élément de la table ne change pas sa taille (sauf au cas exceptionnel où on décide d’augmenter la taille de la table car le « load factor » est trop élevé.
