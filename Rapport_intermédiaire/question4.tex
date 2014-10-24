@@ -2,8 +2,42 @@
 Imaginez une nouvelle méthode à ajouter au type abstrait Dictionary. Cette méthode produit l’union de deux dictionnaires. Écrivez une spécification d’une telle méthode. Écrivez ensuite un algorithme qui construit l’union de deux dictionnaires ordonnés implémentés par des tables ordonnées (ordered search tables). Comment appliquer votre algorithme si les dictionnaires étaient implémentés par une table de hachage ?
 
 %%Réponse
+\SetKwInput{KwPre}{Precondition}
+\SetKwInput{KwPost}{Postcondition}
 \begin{algorithm}
-\KwIn{}
-$s \gets $a\;
-\Return{x}
+\KwPre{Les dictionaires $a$ et $b$ sont de type ordoné}
+\KwPost{Retourne l'union ordonnée des deux dictionnaires a et b}
+Dictionary union(Dictionary a, Dictionary a)
 \end{algorithm}
+
+\begin{algorithm}
+\KwIn{$a$ et $b$ sont deux dictionnaires ordonnés}
+\KwOut{$result$ est l'union de $a$ et $b$}
+\BlankLine
+$sizeResult \longleftarrow sizeA + $sizeB\;
+$result$ dictionnaire de taille sizeResult\;
+$xa \gets 0$\;
+$xb \gets 0$\;
+\For{$xr \gets 0$ \KwTo $sizeResult$}{
+	$valeurA \gets find(xa)$\;
+	$valeurB \gets find(xb)$\;
+	\If{$valeurA == NULL$ or $valeurB < valeurA$} {
+		$result[xr] \gets b[xb]$\;
+		$xb \gets xb + 1$\;
+	} 
+	\ElseIf{$valeurB == NULL$ or $valeurA < valeurB$} {
+		$result[xr] \gets a[xa]$\;
+		$xa \gets xa + 1$\;
+	}
+	\Else{
+		$result[xr] \gets a[xa]$\;
+		$ra \gets xa + 1$\;
+		$rx \gets xr + 1$\;
+		$result[xr] \gets b[xb]$\;
+		$xb \gets xb + 1$\;
+	}
+}
+\Return{$result$}
+\end{algorithm}
+
+Cet algorithme ne serait pas utilisé pour des dictionnaires implémentés avec une tables de hachage. Car il suffit de parcourir un des deux dictionnaires et de lire les valeurs à fin de les ajouter à l'autre.
