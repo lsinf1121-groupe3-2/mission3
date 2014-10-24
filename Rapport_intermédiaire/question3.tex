@@ -4,4 +4,6 @@ En supposant que $A$ est déjà en mémoire, décrivez un algorithme qui compte 
 Justifiez pourquoi la complexité temporelle  de votre algorithme est bien en $\Theta(n$ $log$ $n)$ \textit{(Tanguy)}
 
 %%Réponse
-Réponse
+\lstinputlisting[language=java, inputencoding=utf8]{pseudo-code-question3.java}
+
+Le pseudo-code ci-dessus s'exécute en $\Theta(n\log(n))$ car à chaque itération de la boucle \textit{while}, la moitié des sous-possibilités est éliminée et qu'il faut parcourir les $n$ lignes du tableaux.
