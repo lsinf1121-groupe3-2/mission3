@@ -1,5 +1,15 @@
-%%Énoncé
-Énoncé
+Décrivez comment réaliser le retrait d’une entrée (méthode remove(k)) dans
+une table de hachage qui utilise la technique du linear probing pour gérer les
+collisions et qui n’utilise pas de marqueur spécial pour représenter les entrées
+supprimées. En d’autres termes, il y a lieu de réarranger le contenu de la table de
+hachage de telle sorte qu’elle soit comme si l’entrée supprimée n’avait jamais été
+insérée. Quelle est la complexité temporelle de cette opération de retrait ?
 
-%%Réponse
-Réponse
+Une possibilité serait de retirer l'entrée qui correspond à la clé k, ensuite de récupérer chacune des entrées suivantes et les replacer l'une après l'autre en faisant un appel à put(k).
+Deux cas de figures sont possibles : soit 0 ou plusieurs entrées ont été décalées via le linear probing et un emplacement est disponible juste après, soit 0 ou plusieurs entrées ont été décalées et une entrée correctement positionnée sans décalage (ou la fin de la table) se succèdent.
+
+Dans la première situation, il suffit de décaler chacune des entrées jusqu'à l'espace et les décaler de 1 vers la gauche avec put(k) et supprimer la dernière entrée avant l'espace. Dans le second cas, il faut décaler chaque entrée jusqu'à l'entrée positionnée correctement sans décalage (ou jusqu'au bout de la table) et supprimer la dernière entrée (l'"originale" de la dernière décalée).
+
+Ce replacement aura pour effet de positionner les entrées de la table comme si l'entrée identifiée par la clé k que l'on vient de supprimer n'avait jamais été présente dans la table. En effet, puisque la technique du linear probing est appliquée, les entrées dont l'ajout pouvait créer une collision sont placées à la suite de l'entrée spécifiée par la fonction de hachage dès qu'un emplacement vide est trouvé. Il n'y aura donc qu'un "bloc" d'entrées suivant la position de la clé retirée par remove(k) qui nécéssitera d'être décalé d'un emplacement vers la gauche.
+
+La complexité de cette fonction dépendra de la position de la clé que l'on veut décaler ainsi que du nombre d'entrées non-vides qui suivent dans la table. Dans le pire cas, si la table est pleine et que l'entrée à retirer se trouve en première position, alors il faudra potentiellement décaler toutes les entrées de la table (selon si l'on est dans le cas 2 en fin de table avec toutes les entrées décalées par linear probing ou pas). On est donc dans une situation où la fonction remove(k) s'effectue en $\Theta$(N) avec N étant le nombre d'entrées maximales dans la table de hachage.
