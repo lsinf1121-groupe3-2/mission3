@@ -19,3 +19,24 @@ Citez plusieurs exemples d’application d’un Map et précisez dans chaque cas
 Un cas possible d'utilisation d'un Map est le cas d'un annuaire de code postaux. A chaque ville, les valeurs, correspond un code postal unique, la clé qui forment les entrées du Map.
 
 Une autre utilisation pourrait être un Map utilisé comme dictionnaire, avec chaque entrée constituée d'un index et d'un mot.
+
+%%Énoncé
+Quelles sont les trois méthodes principales du type abstrait \texttt{Map} ? Qu’entend-on par clé,
+valeur et entry dans ce contexte ? Est-il possible d’insérer une valeur null dans un \texttt{Map} ? Expliquez. \\
+Citez plusieurs exemples d’application d’un \texttt{Map} et précisez dans chaque cas à quel type d’information 
+correspond chaque \textit{entry}.
+
+%%Réponse
+TODO after ma conférence 
+Ebauche de réponse:
+
+Les trois méthodes principales d'un type abstrait \texttt{Map} \textbf{M} sont les suivantes:
+\begin{enumerate}
+\item \textit{get(k)}: Si M contient une entrée e = (k,v), avec une clé égale à k, alors la valeur de retour sera v, pour e 
+ou alors renverra \textbf{null}.
+\item \textit{put(k,v)}: Si M n'a pas d'entrée avec une clé égale à k, alors il faut ajouter une entrée (k,v) à M pour 
+que l'on retourne \textbf{null}; sinon, il faut remplacer v par la valeur existante de l'éntrée avec la clé égale à k et retourner 
+la valeur antérieure.
+\item \textit{remove(k)}:
+\end{enumerate}
+

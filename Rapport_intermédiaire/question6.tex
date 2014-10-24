@@ -1,5 +1,5 @@
 %%Énoncé
-Énoncé
+Qu’entend-on par la notion de collision dans une table de hachage ? Les collisions ont elles une influence sur la complexité des opérations ? Si oui, quelle(s) opération(s) avec quelle(s) complexité(s), sinon précisez pourquoi. Quelles sont les techniques utilisées pour gérer les collisions ? Peut-on, grâce à ces techniques, éviter les collisions ?
 
 %%Réponse
-Réponse
+Une collision a lieu lorsque la fonction de hachage envoie une clé à une adresse déjà occupée. A cause des collisions, les foncions get(), put() et remove() pourraient théoriquement s’exécuter en 0(n) dans le pire des cas, car si tous emplacements qu’on essaie sont occupés, il faudra tous les parcourir avant d’en trouver un libre (dans le cas du « open adressing » ou bien il faudra parcourir tous les éléments qui ont déjà été stockés à cette adresse (dans le cas du « separate chaining ») En réalité, on minimise les collisions, de sorte à ce que ces fonctions s’exécutent en 0(1) la majorité du temps. La technique du « separate chaining » consiste à avoir la possibilité de stocker plusieurs éléments dans le même emplacement d’une table de hachage, par exemple en les liant à l’aide d’une liste chainée. La technique du « Open adressing » consiste à trouver un autre emplacement dans la table de hachage que celui renvoyé par la fonction de hachage. Ces techniques parmettent de gérer les collisions, mais pas de les éviter. On peut par d’autres moyens les minimiser, mais jamais complètement les éviter.
