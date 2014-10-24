@@ -1,42 +1,35 @@
-Quelles sont les trois méthodes principales du type abstrait Map ?
+\textit{Quelles sont les trois méthodes principales du type abstrait \texttt{Map} ?}
 
-Les méthodes principales du type abstrait Map sont : put(k,v),remove(k) et get(k).
+Les trois méthodes principales d'un type abstrait \texttt{Map} \textbf{M} sont les suivantes:
+\begin{enumerate}
+\item \textit{get(k)}: si M contient une entrée e = (k,v), avec une clé égale à k, alors la valeur de retour sera v, pour e 
+ou alors renverra \textbf{null}.
+\item \textit{put(k,v)}: si M n'a pas d'entrée avec une clé égale à k, alors il faut ajouter une entrée (k,v) à M pour 
+que l'on retourne \textbf{null}; sinon, il faut remplacer v par la valeur existante de l'éntrée avec la clé égale à k et retourner 
+la valeur antérieure.
+\item \textit{remove(k)}: permet de retirer une entrée de M ayant une clé égale à k, et retourne sa valeur; si m n'a pas de telle entrée, alors on retourne \textbf{null}.
+\end{enumerate}
 
-Qu’entend-on par clé, valeur et entry dans ce contexte ?
+\textit{Qu’entend-on par clé, valeur et entry dans ce contexte ?}
 
-Une clé est un identificateur unique qui est assigné par une application ou un utilisateur à un objet/ une valeur associé(e). Dans le contexte d'un Map, chaque clé doit être unique
+Une clé est un identificateur unique qui est assigné par une application ou un utilisateur à un objet/une valeur associé(e). Dans le contexte d'un Map, chaque clé doit être unique
 
 Dans un Map, les valeurs sont les données qui constituent les éléments du type abstrait. C'est sur base de ces données que les éléments sont organisés dans la structure.
 
 A chaque valeur, il correspond une clé unique (dans le cas d'un type abstrait Map) qui à elles deux forment une entrée.
 
-Est-il possible d’insérer une valeur null dans un Map ? Expliquez.
+\textit{Est-il possible d’insérer une valeur null dans un \texttt{Map} ? Expliquez.}
 
 Il est possible d'insérer une valeur null dans un Map, bien qu'en pratique ce ne soit pas d'application. Null n'est pas utilisé comme valeur, car celle-ci est spécifique, elle est utilisée comme valeur de retour lorsque la méthode get(k) n'a pas trouvé d'entrée correspondante à la clé passée en paramètre dans le Map.
 
-Citez plusieurs exemples d’application d’un Map et précisez dans chaque cas à quel type d’information correspond chaque entry.
+\textit{Citez plusieurs exemples d’application d’un \texttt{Map} et précisez dans chaque cas à quel type d’information correspond chaque entry.}
 
 Un cas possible d'utilisation d'un Map est le cas d'un annuaire de code postaux. A chaque ville, les valeurs, correspond un code postal unique, la clé qui forment les entrées du Map.
 
 Une autre utilisation pourrait être un Map utilisé comme dictionnaire, avec chaque entrée constituée d'un index et d'un mot.
 
 %%Énoncé
-Quelles sont les trois méthodes principales du type abstrait \texttt{Map} ? Qu’entend-on par clé,
-valeur et entry dans ce contexte ? Est-il possible d’insérer une valeur null dans un \texttt{Map} ? Expliquez. \\
-Citez plusieurs exemples d’application d’un \texttt{Map} et précisez dans chaque cas à quel type d’information 
-correspond chaque \textit{entry}.
-
-%%Réponse
-TODO after ma conférence 
-Ebauche de réponse:
-
-Les trois méthodes principales d'un type abstrait \texttt{Map} \textbf{M} sont les suivantes:
-\begin{enumerate}
-\item \textit{get(k)}: Si M contient une entrée e = (k,v), avec une clé égale à k, alors la valeur de retour sera v, pour e 
-ou alors renverra \textbf{null}.
-\item \textit{put(k,v)}: Si M n'a pas d'entrée avec une clé égale à k, alors il faut ajouter une entrée (k,v) à M pour 
-que l'on retourne \textbf{null}; sinon, il faut remplacer v par la valeur existante de l'éntrée avec la clé égale à k et retourner 
-la valeur antérieure.
-\item \textit{remove(k)}:
-\end{enumerate}
-
+%Quelles sont les trois méthodes principales du type abstrait \texttt{Map} ? Qu’entend-on par clé,
+%valeur et entry dans ce contexte ? Est-il possible d’insérer une valeur null dans un \texttt{Map} ? Expliquez. \\
+%Citez plusieurs exemples d’application d’un \texttt{Map} et précisez dans chaque cas à quel type d’information 
+%correspond chaque \textit{entry}.
