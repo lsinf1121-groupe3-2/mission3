@@ -7,7 +7,7 @@ public class Journal {
 	private String foR1;
 	private String foR1Name;
 	private String foR2;
-	private String foR2name;
+	private String foR2Name;
 	private String foR3;
 	private String foR3Name;
 	/**
@@ -16,6 +16,12 @@ public class Journal {
 	public String getRank() {
 		return rank;
 	}
+	
+	public String toString(){
+		return title+": "+rank+", "+foR1Name+"("+foR1+")"+", "+foR2Name +"("+foR2+")"+", "+foR3Name +"("+foR3+")";
+	}
+	
+	
 	/**
 	 * @param rank the rank to set
 	 */
@@ -73,14 +79,14 @@ public class Journal {
 	/**
 	 * @return the foR2name
 	 */
-	public String getFoR2name() {
-		return foR2name;
+	public String getFoR2Name() {
+		return foR2Name;
 	}
 	/**
 	 * @param foR2name the foR2name to set
 	 */
-	public void setFoR2name(String foR2name) {
-		this.foR2name = foR2name;
+	public void setFoR2Name(String foR2name) {
+		this.foR2Name = foR2name;
 	}
 	/**
 	 * @return the foR3

@@ -4,6 +4,8 @@ import interpreter.Interpreter;
 
 import java.io.*;
 
+import dialog.Dialog;
+import dictionary.JournalsDictionary;
 import business.Journal;
 
 /**
@@ -15,6 +17,7 @@ public class Controller {
     Interpreter csvInterpereter;
     String commandFile = "Journals.csv";
     BufferedReader br;
+    JournalsDictionary catalog;
 
     /**
      * @pre --
@@ -64,8 +67,14 @@ public class Controller {
 		try {
 			commandLigne = br.readLine(); //read the first line and drop it
 			while ((commandLigne = br.readLine())!=null){
-				 Journal result = csvInterpereter.interprete(commandLigne); 
-				 //TODO: add the journal to the dictionnary
+				if (!commandLigne.equalsIgnoreCase(""))
+				{
+					 Journal result = csvInterpereter.interprete(commandLigne); 
+					 if (result!=null)
+					 {
+						 catalog.put(result.getTitle(), result);
+					 }
+				}
 			}
 		} catch (IOException e) {
 			System.out.println("Error while I/O operations");
@@ -80,9 +89,11 @@ public class Controller {
      * Les fichiers ont été fermés correctement.
      */
     public void start(String[] args) {
+    	catalog = new JournalsDictionary();
     	this.initializeReader();
 		this.interpreteFile();
-		//userDialog.start();
+		Dialog userDialog = new Dialog (catalog);
+		userDialog.start();
 		this.closeFiles();
     }
 

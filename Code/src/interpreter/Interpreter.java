@@ -15,7 +15,7 @@ public class Interpreter {
 			System.out.println(commandLigne);
 			String args[] = commandLigne.split(",", -1);
 			if(args.length > 8){
-				//there were a ',' inside a field.
+				//there was a ',' inside a field.
 				//guess it's in the title field so merge these fields
 				for(int i = 2; i < args.length - 8; i++){
 					args[1] += args[i];
@@ -32,12 +32,13 @@ public class Interpreter {
 				journal.setFoR1(args[2]);
 				journal.setFoR1Name(args[3]);
 				journal.setFoR2(args[4]);
-				journal.setFoR2name(args[5]);
+				journal.setFoR2Name(args[5]);
 				journal.setFoR3(args[6]);
 				journal.setFoR3Name(args[7]);
+				return journal;
 			}
 		}
-		return journal;
+		return null;
 	}
 
 }
