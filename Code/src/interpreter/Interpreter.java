@@ -12,7 +12,6 @@ public class Interpreter {
 	public Journal interprete(String commandLigne) {
 		Journal journal = null;
 		if(commandLigne != null && !commandLigne.isEmpty()){
-			System.out.println(commandLigne);
 			String args[] = commandLigne.split(",", -1);
 			if(args.length > 8){
 				//there was a ',' inside a field.
@@ -22,7 +21,6 @@ public class Interpreter {
 				}
 			}
 			if (args.length < 8){
-				//WTF ?
 				System.out.println("incorrect line!");
 			}
 			else{
