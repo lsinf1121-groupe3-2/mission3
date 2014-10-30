@@ -17,6 +17,10 @@ public class Dialog {
 		return dico.get(title);
 	}
 	
+	/**
+	 * Interacts with the user and allows him to search for dictionaries
+	 * @pre la variable dico est initialisée
+	 */
 	public void start(){
 		boolean finished = false;
 		String s;

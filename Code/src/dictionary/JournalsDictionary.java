@@ -8,6 +8,7 @@ import business.Journal;
 public class JournalsDictionary extends HashMap<String, Journal>{
 	
 	public JournalsDictionary(){
-		super(20000,(float)0.75);
+		//On hésitait à mettre super(20000) car on conaissait la taille du fichier utilisé
+		super();
 	}
 }
