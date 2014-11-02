@@ -55,7 +55,7 @@
 %\setcounter{page}{1}
 %\newpage
 \section{Introduction}
-Dans le cadre du cours "Algorithmique et structures de données", il nous a été demandé de corriger la soumission de la mission 3 du groupe 3.1. Cet exercice à pour mission de faire une analyse critique d'un autre groupe dans le but d'avoir un point de vue externe à notre propre rendu. 
+Dans le cadre du cours "Algorithmique et structures de données", il nous a été demandé de corriger la soumission de la mission 3 du groupe 3.1. Cet exercice a pour mission de faire une analyse critique d'un autre groupe dans le but d'avoir un point de vue externe à notre propre rendu. 
 
 \section{Analyse critique du groupe 3.1}
 
@@ -69,7 +69,7 @@ L'implémentation du dictionnaire a été réalisé par une HashMap. Cette méth
 
 \subsection{Qualité de la conception générale}
 
-Du point de vue de l'organisation du code, il n'y a pas beaucoup de chose à reprocher. Le nombre des classes n'est pas exagéré, quatre y compris la \verb+main+. Leurs noms permet directement de comprendre leurs fonctionnalités et aucune d'entre elle ne tire en longueur. La classe \verb+Decoupage+ qui permet de parser les lignes du fichier texte à chaque virgule est peut-être un peu fastidieuse, mais néanmoins fonctionne même si un moyen plus simple aurait été possible grâce à des méthodes de split de string.
+Du point de vue de l'organisation du code, il n'y a pas beaucoup de choses à reprocher. Le nombre des classes n'est pas exagéré, quatre y compris la \verb+main+. Leurs noms permettent directement de comprendre leurs fonctionnalités et aucune d'entre elle ne tire pas en longueur. La classe \verb+Decoupage+ qui permet de parser les lignes du fichier texte à chaque virgule est peut-être un peu fastidieuse, mais néanmoins fonctionne même si un moyen plus simple aurait été possible grâce à des méthodes de split de string.
 \\
 \begin{itemize}
 \item[$\bullet$] Note attribuée : A
@@ -77,7 +77,7 @@ Du point de vue de l'organisation du code, il n'y a pas beaucoup de chose à rep
 
 \subsection{Qualité des spécifications des méthodes implémentées}
 
-Chaque méthode du code est commentée par une brève spécification, même si elle permet de comprendre facilement ce que doit réaliser chaque méthode, elles sont parfois peu complète. Je pense notamment à la méthode \verb+nextVirgule+ qui ne contient aucune explication même si cela peut paraître explicite. De plus aucune méthode ne contient de post ou pré conditions.
+Chaque méthode du code est commentée par une brève spécification, même si elle permet de comprendre facilement ce que doit réaliser chaque méthode, elles sont parfois peu complètes. Je pense notamment à la méthode \verb+nextVirgule+ qui ne contient aucune explication même si cela peut paraître explicite. De plus aucune méthode ne contient de post ou pré conditions comme la Javadoc conseille de faire.
 \\
 \begin{itemize}
 \item[$\bullet$] Note attribuée : C
@@ -85,7 +85,7 @@ Chaque méthode du code est commentée par une brève spécification, même si e
 
 \subsection{Qualité du code en Java}
 
-Pour ce qui est de la qualité du code, celui-ci est plutôt bien structuré et lisible. Étant donné que la mission était relativement simple il est logique que le code ne présente pas beaucoup de commentaire. Cependant quelques commentaires dans la main n'aurait pas été de refus afin de vite comprendre chaque étape lors de l'exécution du programme.
+Pour ce qui est de la qualité du code, celui-ci est plutôt bien structuré et lisible. Étant donné que la mission était relativement simple il est logique que le code ne présente pas beaucoup de commentaire. Cependant, quelques commentaires dans la main n'aurait pas été de refus afin de vite comprendre chaque étape lors de l'exécution du programme.
 \\
 \begin{itemize}
 \item[$\bullet$] Note attribuée : B
@@ -93,7 +93,7 @@ Pour ce qui est de la qualité du code, celui-ci est plutôt bien structuré et 
 
 \subsection{Efficacité du code}
 
-L'utilisation d'une \verb+HashMap+ permet de limité les coups en nombre d'opérations à effectuer. Ceux-ci sont donc en $\theta(n)$
+L'utilisation d'une \verb+HashMap+ permet de limiter les coups en nombre d'opérations à effectuer. Ceux-ci sont donc en $\theta(n)$
 pour la création de la table, où $n$ est le nombre de ligne et donc le nombre de revues scientifiques dans le fichier texte. Nous pouvons aussi dire qu'on a une complexité de $\theta(1)$ pour les méthodes de la classe \verb+Découpage+, \verb+Lecture+ et \verb+Revue+ et aussi lorsque l'on souhaite récupérer un élément dans cette table. Il faut noter que le programme tourne en boucle tant que l'utilisateur ne rentre pas la lettre q dans son terminal. Pour la complexité spatiale il n'y a pas de surprise la \verb+HashMap+ stock $n$ objets journal et est donc de $\theta(n)$.
 \\
 \begin{itemize}
@@ -102,7 +102,7 @@ pour la création de la table, où $n$ est le nombre de ligne et donc le nombre 
 
 \subsection{Clarté et pertinence des conclusions}
 
-Le rapport est concis, mais néanmoins les informations qui nous intéressent réellement sont bien expliquées. La complexité temporelle a bien été analysé et un schéma clair permet de vite comprendre le meilleur et le pire des cas de la fonction \verb+Get+ de la table de hachage. Cependant il n'y a pas de justification de la pertinence de l'utilisation de la classe \verb+HashMap+ prédéfinie en Java. Par ailleurs aucune source n'a été mentionné.
+Le rapport est concis, mais néanmoins les informations qui nous intéressent réellement sont bien expliquées. La complexité temporelle a bien été analysée et un schéma clair permet de vite comprendre le meilleur et le pire des cas de la fonction \verb+Get+ de la table d' hachage. Cependant, il n'y a pas de justification de la pertinence de l'utilisation de la classe \verb+HashMap+ prédéfinie en Java. Par ailleurs aucune source n'a été mentionné.
 \\
 \begin{itemize}
 \item[$\bullet$] Note attribuée : B
