@@ -55,15 +55,36 @@
 %\setcounter{page}{1}
 %\newpage
 \section{Introduction}
-Dans le cadre du cours "Algorithmique et structures de données", il nous a été demandé de corriger la soumission de la mission 3 du groupe 3.1. Cet exercice à pour mission de faire une analyse critique d'un autre groupe d'un le but d'avoir un point de vue externe à nos propre rendu. 
+Dans le cadre du cours "Algorithmique et structures de données", il nous a été demandé de corriger la soumission de la mission 3 du groupe 3.1. Cet exercice à pour mission de faire une analyse critique d'un autre groupe dans le but d'avoir un point de vue externe à notre propre rendu. 
 
 \section{Analyse critique du groupe 3.1}
 
 \subsection{Pertinence des produits par rapport aux objectifs d’apprentissage de la mission.}
+L'implémentation du dictionnaire a été réalisé par une HashMap. Cette méthode est relativement simple, mais efficace. L'implémentation HashMap fournis par la librairie \verb+java.util.HashMap+ permet de crée facilement un dictionnaire et évite toute collision possible entre les différents éléments en utilisant la méthode de chainage séparé. Ce choix est donc tout à fait judicieux et remplis les compétences visées pour cette mission
+\\
+\begin{itemize}
+\item[$\bullet$] Note attribuée : A
+\end{itemize}
 
 \subsection{Qualité de la conception générale}
+
+Du point de vue de l'organisation du code, il n'y a pas beaucoup de chose à reprocher. Le nombre des classes n'est pas exagéré, quatre y compris la \verb+main+. Leurs noms permet directement de comprendre leurs fonctionnalités et aucune d'entre elle ne tire en longueur. La classe \verb+Decoupage+ qui permet de parser les lignes du fichier texte à chaque virgule est peut-être un peu fastidieuse, mais néanmoins fonctionne même si un moyen plus simple aurait été possible grâce à des méthodes de split de string.
+\\
+\begin{itemize}
+\item[$\bullet$] Note attribuée : A
+\end{itemize}
+
 \subsection{Qualité des spécifications des méthodes implémentées}
+
+Chaque méthode du code est commentée par une brève spécification, même si elle permet de comprendre facilement ce que doit réaliser chaque méthode, elles sont parfois peu complète. Je pense notamment à la méthode \verb+nextVirgule+ qui ne contient aucune explication même si cela peut paraître explicite. De plus aucune méthode ne contient de post ou pré conditions.
+\\
+\begin{itemize}
+\item[$\bullet$] Note attribuée : B (voir C)
+\end{itemize}
+
 \subsection{Qualité du code en Java}
+
+
 \subsection{Efficacité du code}
 \subsection{Clarté et pertinence des conclusions}
 \subsection{Remarques}
