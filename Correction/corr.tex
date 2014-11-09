@@ -93,8 +93,8 @@ Pour ce qui est de la qualité du code, celui-ci est plutôt bien structuré et 
 
 \subsection{Efficacité du code}
 
-L'utilisation d'une \verb+HashMap+ permet de limiter les coups en nombre d'opérations à effectuer. Ceux-ci sont donc en $\theta(n)$
-pour la création de la table, où $n$ est le nombre de ligne et donc le nombre de revues scientifiques dans le fichier texte. Nous pouvons aussi dire qu'on a une complexité de $\theta(1)$ pour les méthodes de la classe \verb+Découpage+, \verb+Lecture+ et \verb+Revue+ et aussi lorsque l'on souhaite récupérer un élément dans cette table. Il faut noter que le programme tourne en boucle tant que l'utilisateur ne rentre pas la lettre q dans son terminal. Pour la complexité spatiale il n'y a pas de surprise la \verb+HashMap+ stock $n$ objets journal et est donc de $\theta(n)$.
+L'utilisation d'une \verb+HashMap+ permet de limiter les coups en nombre d'opérations à effectuer. Ceux-ci sont donc en $O(n)$
+pour la création de la table, où $n$ est le nombre de ligne et donc le nombre de revues scientifiques dans le fichier texte. Nous pouvons aussi dire qu'on a une complexité de $O(1)$ pour les méthodes de la classe \verb+Découpage+, \verb+Lecture+ et \verb+Revue+ et aussi lorsque l'on souhaite récupérer un élément dans cette table. Il faut noter que le programme tourne en boucle tant que l'utilisateur ne rentre pas la lettre q dans son terminal. Pour la complexité spatiale il n'y a pas de surprise la \verb+HashMap+ stock $n$ objets journal et est donc de $O(n)$.
 \\
 \begin{itemize}
 \item[$\bullet$] Note attribuée : A
